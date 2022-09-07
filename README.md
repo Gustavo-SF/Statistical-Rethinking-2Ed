@@ -1,0 +1,17 @@
+# Statistical Rethinking Statistics 2Ed
+
+These are my solutions to the exercises in the book [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/).
+
+## Installation
+
+To run the notebooks you can install the dependencies with pip or [poetry]().
+
+```bash
+pip install -r requirements.txt
+```
+
+or
+
+```bash
+poetry install
+```

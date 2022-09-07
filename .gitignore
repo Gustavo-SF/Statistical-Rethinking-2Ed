@@ -1,0 +1,6 @@
+# Environment lock files (OS specific)
+poetry.lock
+
+# Compiled files
+.ipynb_checkpoints
+__pycache__
