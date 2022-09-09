@@ -4,7 +4,7 @@ These are my solutions to the exercises in the book [Statistical Rethinking](htt
 
 ## Installation
 
-To run the notebooks you can install the dependencies with pip or [poetry]().
+You can install the dependencies with pip or [poetry]().
 
 ```bash
 pip install -r requirements.txt
