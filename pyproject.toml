@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "statistical-rethinking-2ed"
+name = "rethinking"
 version = "0.1.0"
 description = "Exercise solutions to Statistical Rethinking 2Ed"
 authors = ["Gustavo-SF <gustavo.fonseca@outlook.pt>"]
