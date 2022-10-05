@@ -2,6 +2,8 @@ import pathlib
 
 import pandas as pd
 import numpy as np
+import pymc as pm
+from scipy import stats
 
 
 DATA_PATH = pathlib.Path('..') / '..' / 'data'
@@ -36,3 +38,19 @@ def precis(posterior, var_names):
         'mean', 'std', '5.5%', '94.5%'
     ]
     return precis_table
+
+
+def quap(model):
+    vars_ = [
+        var 
+        for val in model.value_vars 
+        for var, values in model.rvs_to_values.items() 
+        if val == values
+    ]
+    var_names = [v.name for v in vars_]
+    mean_q = pm.find_MAP()
+    H = pm.find_hessian(mean_q, vars_)
+    cov = np.linalg.inv(H)
+    mean = np.concatenate([np.atleast_1d(mean_q[var_]) for var_ in var_names])
+    posterior = stats.multivariate_normal(mean=mean, cov=cov)
+    return posterior, vars_
