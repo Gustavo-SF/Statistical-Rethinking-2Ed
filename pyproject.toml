@@ -17,6 +17,7 @@ pandas = "^1.4.4"
 patsy = "^0.5.2"
 causalgraphicalmodels = "^0.0.4"
 daft = "^0.1.2"
+statsmodels = "^0.13.2"
 
 [tool.poetry.dev-dependencies]
 
